@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+	body {
+		background-color: #000000;
+		color: #ffffff;
+		font-family: monospace;
+		font-size: 14px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 400;
+		line-height: 18px;
+	}
+	th, td {
+		text-align: left;
+		width: auto;
+		padding: 2px 2px;
+	}
+	th {
+		color: #ffffff;
+		background-color: #000000;
+	}
+	input[type=text] {
+		background-color: #000000;
+		color: #ffffff;
+		font-family: monospace;
+	}
+}
+</style>
+</head>
+
+<body>
+
+
+<table>
+	<tr>
+		<th>ITEM</th>
+		<th>COUNT</th>
+	</tr>
+	<tr>
+		<td>$100.00</td>
+		<td><input type="text" name="hundred" id="hundred" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$50.00</td>
+		<td><input type="text" name="fifty" id="fifty" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$20.00</td>
+		<td><input type="text" name="twenty" id="twenty" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$10.00</td>
+		<td><input type="text" name="ten" id="ten" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$5.00</td>
+		<td><input type="text" name="five" id="five" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$1.00</td>
+		<td><input type="text" name="one" id="one" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$0.25</td>
+		<td><input type="text" name="quarter" id="quarter" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$0.10</td>
+		<td><input type="text" name="dime" id="dime" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$0.05</td>
+		<td><input type="text" name="nickel" id="nickel" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$0.01</td>
+		<td><input type="text" name="penny" id="penny" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr id="blankRow" height="18px"></tr>
+	<tr>
+		<td>$10.00</td>
+		<td><input type="text" name="quarterRoll" id="quarterRoll" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$5.00</td>
+		<td><input type="text" name="dimeRoll" id="dimeRoll" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$2.00</td>
+		<td><input type="text" name="nickelRoll" id="nickelRoll" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr>
+		<td>$0.50</td>
+		<td><input type="text" name="pennyRoll" id="pennyRoll" size="8" oninput="calculate()"></td>
+	</tr>
+	<tr id="blankRow" height="18px"></tr>
+	<tr>
+		<th>TOTAL</th>
+		<th><input type="text" name="total" id="total" size="8" value="$0.00" readonly></th>
+	</tr>
+</table>
+
+<script>
+	function calculate() {
+		//calculate total
+		var total = 
+			(parseFloat(document.getElementById("hundred").value) || 0) * 100
+			+ (parseFloat(document.getElementById("fifty").value) || 0) * 50
+			+ (parseFloat(document.getElementById("twenty").value) || 0) * 20
+			+ (parseFloat(document.getElementById("ten").value) || 0) * 10
+			+ (parseFloat(document.getElementById("five").value) || 0) * 5
+			+ (parseFloat(document.getElementById("one").value) || 0) * 1
+			+ (parseFloat(document.getElementById("quarter").value) || 0) * 0.25
+			+ (parseFloat(document.getElementById("dime").value) || 0) * 0.10
+			+ (parseFloat(document.getElementById("nickel").value) || 0) * 0.05
+			+ (parseFloat(document.getElementById("penny").value) || 0) * 0.01
+			+ (parseFloat(document.getElementById("quarterRoll").value) || 0) * 10
+			+ (parseFloat(document.getElementById("dimeRoll").value) || 0) * 5
+			+ (parseFloat(document.getElementById("nickelRoll").value) || 0) * 2
+			+ (parseFloat(document.getElementById("pennyRoll").value) || 0) * 0.50;
+		//set element with total
+		document.getElementById("total").value = "$" + total.toFixed(2);
+	}
+</script>
+
+<noscript>
+	ERROR: JAVASCRIPT NOT SUPPORTED BY YOUR BROWSER
+</noscript>
+
+</body>
+</html>
