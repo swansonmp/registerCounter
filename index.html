@@ -7,11 +7,11 @@
 		background-color: #000000;
 		color: #ffffff;
 		font-family: monospace;
-		font-size: 14px;
+		font-size: 20px;
 		font-style: normal;
 		font-variant: normal;
 		font-weight: 400;
-		line-height: 18px;
+		line-height: 24px;
 	}
 	th, td {
 		text-align: left;
@@ -22,10 +22,16 @@
 		color: #ffffff;
 		background-color: #000000;
 	}
-	input[type=text] {
+	input[type=number], input[type=text] {
+		width: 90px;
 		background-color: #000000;
 		color: #ffffff;
 		font-family: monospace;
+		font-size: 20px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 400;
+		line-height: 24px;
 	}
 }
 </style>
@@ -41,65 +47,65 @@
 	</tr>
 	<tr>
 		<td>$100.00</td>
-		<td><input type="text" name="hundred" id="hundred" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="hundred" id="hundred" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$50.00</td>
-		<td><input type="text" name="fifty" id="fifty" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="fifty" id="fifty" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$20.00</td>
-		<td><input type="text" name="twenty" id="twenty" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="twenty" id="twenty" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$10.00</td>
-		<td><input type="text" name="ten" id="ten" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="ten" id="ten" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$5.00</td>
-		<td><input type="text" name="five" id="five" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="five" id="five" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$1.00</td>
-		<td><input type="text" name="one" id="one" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="one" id="one" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$0.25</td>
-		<td><input type="text" name="quarter" id="quarter" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="quarter" id="quarter" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$0.10</td>
-		<td><input type="text" name="dime" id="dime" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="dime" id="dime" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$0.05</td>
-		<td><input type="text" name="nickel" id="nickel" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="nickel" id="nickel" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$0.01</td>
-		<td><input type="text" name="penny" id="penny" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="penny" id="penny" oninput="calculate()"></td>
 	</tr>
 	<tr id="blankRow" height="18px"></tr>
 	<tr>
 		<td>$10.00</td>
-		<td><input type="text" name="quarterRoll" id="quarterRoll" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="quarterRoll" id="quarterRoll" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$5.00</td>
-		<td><input type="text" name="dimeRoll" id="dimeRoll" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="dimeRoll" id="dimeRoll" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$2.00</td>
-		<td><input type="text" name="nickelRoll" id="nickelRoll" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="nickelRoll" id="nickelRoll" oninput="calculate()"></td>
 	</tr>
 	<tr>
 		<td>$0.50</td>
-		<td><input type="text" name="pennyRoll" id="pennyRoll" size="8" oninput="calculate()"></td>
+		<td><input type="number" name="pennyRoll" id="pennyRoll" oninput="calculate()"></td>
 	</tr>
 	<tr id="blankRow" height="18px"></tr>
 	<tr>
 		<th>TOTAL</th>
-		<th><input type="text" name="total" id="total" size="8" value="$0.00" readonly></th>
+		<th><input type="text" name="total" id="total" value="$0.00" readonly></th>
 	</tr>
 </table>
 
